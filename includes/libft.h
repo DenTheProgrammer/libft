@@ -6,7 +6,7 @@
 /*   By: mdebbi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/02 19:57:19 by mdebbi            #+#    #+#             */
-/*   Updated: 2019/04/02 21:28:28 by mdebbi           ###   ########.fr       */
+/*   Updated: 2019/04/02 22:08:17 by mdebbi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,13 @@
 /*
 ** additional
 */
+void	*ft_memalloc(size_t size);
+void    ft_memdel(void **ap);
+
+void    ft_strclr(char *s);
+void	ft_striter(char *s, void (*f)(char *));
+void    ft_striteri(char *s, void (*f)(unsigned int, char *));
+
 void	ft_putchar(char c);
 void	ft_putstr(char const *s);
 void	ft_putendl(char const *s);
