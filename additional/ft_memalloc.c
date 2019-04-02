@@ -15,12 +15,12 @@
 void	*ft_memalloc(size_t size)
 {
 	size_t i;
-	void *mem;
+	char *mem;
 	
-	mem = malloc(size);
+	mem = (char *)malloc(size);
 	if (!mem)
 		return (NULL);
-	while (i < size)
-		/////TODO
-	return (mem);		
+	while (i < size)///??
+		mem[i++] = 0;
+	return ((void *)mem);		
 }

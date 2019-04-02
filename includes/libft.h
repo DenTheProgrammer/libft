@@ -18,12 +18,20 @@
 /*
 ** additional
 */
+size_t	ft_strlen(const char *s);
 void	*ft_memalloc(size_t size);
 void    ft_memdel(void **ap);
-
+char	*ft_strnew(size_t size);
+void	ft_strdel(char **as);
 void    ft_strclr(char *s);
 void	ft_striter(char *s, void (*f)(char *));
 void    ft_striteri(char *s, void (*f)(unsigned int, char *));
+char	*ft_strmap(char const *s, char (*f)(char));
+char	*ft_strmapi(char const *s, char(*f)(unsigned int, char));
+int 	ft_strequ(char const *s1, char const *s2);
+int 	ft_strnequ(char const *s1, char const *s2, size_t n);
+char	*ft_strsub(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
 
 void	ft_putchar(char c);
 void	ft_putstr(char const *s);
@@ -32,9 +40,13 @@ void	ft_putnbr(int nb);
 /*
 ** libc
 */
+void	*ft_memset(void *s, int c, size_t n);
+char	*ft_strdup(const char *s);
+int		ft_strcmp(const char *s1, const char *s2);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_atoi(char *str);
-char	*ft_strcpy(char *dest, char *src);
-char	*ft_strncpy(char *dest, char *src, unsigned int n);
+char	*ft_strcpy(char *dest, const char *src);
+char	*ft_strncpy(char *dest, const char *src, size_t n);
 char	*ft_toupper(char *str);
 char	*ft_tolower(char *str);
 int		ft_isalpha(char *str);

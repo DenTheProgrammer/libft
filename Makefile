@@ -14,10 +14,10 @@ NAME = libft.a
 
 INCLUDES = includes/
 
-$(NAME):
+$(NAME): fclean
 	gcc -c -Wall -Wextra -Werror */*.c -I $(INCLUDES)
 	ar -rc $(NAME) *.o
-all: $(NAME)
+all: $(NAME) clean
 
 clean:
 	rm -f *.o
