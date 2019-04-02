@@ -23,7 +23,7 @@ size_t		get_word_count(const char *s, char del)
 	i = 0;
 	while (i < strlen)
 	{
-		if (s[i] != del && s[i + 1] == del)
+		if (s[i] != del && (s[i + 1] == del || s[i + 1] == '\0'))
 			count++;
 		i++;
 	}
@@ -35,7 +35,7 @@ int		get_word_len(int start_ind, const char *s, char del)
 	int i;
 
 	i = 0;
-	while (s[start_ind + i] != del)
+	while (s[start_ind + i] != del && s[start_ind + i] != '\0')
 		i++;
 	return (i);
 }
@@ -60,16 +60,18 @@ char	**ft_strsplit(char const *s, char c)
 	int		word_len;
 	int		curr_word_ind;
 	size_t word_count;
+	size_t len;
 
+	len = ft_strlen(s);
 	word_count = get_word_count(s, c);
 	curr_word_ind = 0;
 	i = 0;
 	res = (char **)malloc(sizeof(char *) * (word_count + 1));
 	if (!res)
 		return (NULL);
-	while (i < ft_strlen(s))
+	while (i < len)
 	{
-		if (s[i] != ' ' && s[i] != '\t' && s[i] != '\n')
+		if (s[i] != c)
 		{
 			word_len = get_word_len(i, s, c);
 			res[curr_word_ind] = (char *)malloc(sizeof(char) * (word_len + 1));
