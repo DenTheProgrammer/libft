@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdebbi <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: mdebbi <mdebbi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/03 19:28:21 by mdebbi            #+#    #+#             */
-/*   Updated: 2019/04/03 20:36:35 by mdebbi           ###   ########.fr       */
+/*   Updated: 2019/04/06 22:16:41 by mdebbi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		is_space(char c)
+static int		is_space(char c)
 {
 	return (c == ' ' || c == '\n' || c == '\t');
 }
@@ -25,16 +25,20 @@ char	*ft_strtrim(char const *s)
 	size_t	aftsp;
 	size_t	len;
 
+	if (!s)
+		return (NULL);
 	len = ft_strlen(s);
 	i = 0;
 	befsp = 0;
 	aftsp = 0;
 	while (is_space(s[i++]))
 		befsp++;
+	if (befsp == len)
+		return ("");
 	i = len;
 	while (is_space(s[--i]))
 		aftsp++;
-	trimmed = (char *)malloc(len - befsp - aftsp + 1);
+	trimmed = ft_strnew(len - befsp - aftsp);
 	if (!trimmed)
 		return (NULL);
 	ft_strcpy(trimmed, ft_strsub(s, (unsigned int)befsp, len - befsp - aftsp));

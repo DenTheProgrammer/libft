@@ -6,7 +6,7 @@
 /*   By: mdebbi <mdebbi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/02 19:57:19 by mdebbi            #+#    #+#             */
-/*   Updated: 2019/04/05 17:37:54 by mdebbi           ###   ########.fr       */
+/*   Updated: 2019/04/05 18:41:33 by mdebbi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,8 +73,8 @@ int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
-char	*ft_toupper(char *str);
-char	*ft_tolower(char *str);
+int		ft_toupper(int c);
+int		ft_tolower(int c);
 /*
 ** bonus list
 */

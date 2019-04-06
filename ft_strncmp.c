@@ -6,7 +6,7 @@
 /*   By: mdebbi <mdebbi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/03 19:06:54 by mdebbi            #+#    #+#             */
-/*   Updated: 2019/04/05 17:25:09 by mdebbi           ###   ########.fr       */
+/*   Updated: 2019/04/06 19:55:49 by mdebbi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,14 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n)
 	i = 0;
 	str1 = (unsigned char *)s1;
 	str2 = (unsigned char *)s2;
+	if (n == 0)
+		return (0);
 	while (i < n && str1[i] && str2[i])
 	{
 		if (str1[i] != str2[i])
-			break ;
+			return (str1[i] - str2[i]);
+		if (i == n - 1)
+			return 0;
 		i++;
 	}
 	return (str1[i] - str2[i]);

@@ -6,18 +6,18 @@
 /*   By: mdebbi <mdebbi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/03 21:27:10 by mdebbi            #+#    #+#             */
-/*   Updated: 2019/04/05 15:27:52 by mdebbi           ###   ########.fr       */
+/*   Updated: 2019/04/06 20:06:40 by mdebbi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	intlen(int n)
+static size_t	intlen(int n)
 {
 	size_t len;
 
 	len = 0;
-	if (n < 0)
+	if (n <= 0)
 		len++;
 	while (n)
 	{
@@ -36,17 +36,19 @@ char	*ft_itoa(int n)
 	min = 1;
 	len = intlen(n);
 	res = ft_strnew(len);
-    if (n < 0)
-    {
-        res[0] = '-';
-        min = -1;
-    }
-    while (len)
-    {
-        if (min == -1 && len == 1)
-          break ;
-        res[--len] = min * (n % 10) + '0';
-        n /= 10;
-    }
-    return (res);
+	if (!res)
+		return (NULL);
+	if (n < 0)
+	{
+		res[0] = '-';
+		min = -1;
+	}
+	while (len)
+	{
+		if (min == -1 && len == 1)
+			break ;
+		res[--len] = min * (n % 10) + '0';
+		n /= 10;
+	}
+	return (res);
 }

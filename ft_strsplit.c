@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdebbi <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: mdebbi <mdebbi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/03 20:58:01 by mdebbi            #+#    #+#             */
-/*   Updated: 2019/04/05 14:55:35 by mdebbi           ###   ########.fr       */
+/*   Updated: 2019/04/06 21:58:11 by mdebbi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		get_word_count(const char *s, char del)
+static size_t		get_word_count(const char *s, char del)
 {
 	size_t i;
 	size_t strlen;
@@ -30,7 +30,7 @@ size_t		get_word_count(const char *s, char del)
 	return (count);
 }
 
-int		get_word_len(int start_ind, const char *s, char del)
+static int		get_word_len(int start_ind, const char *s, char del)
 {
 	int i;
 
@@ -40,7 +40,7 @@ int		get_word_len(int start_ind, const char *s, char del)
 	return (i);
 }
 
-void	str_copy(const char *src, char *dest, int src_len)
+static void	str_copy(const char *src, char *dest, int src_len)
 {
 	int i;
 
@@ -62,6 +62,8 @@ char	**ft_strsplit(char const *s, char c)
 	size_t word_count;
 	size_t len;
 
+	if (!s)
+		return (NULL);
 	len = ft_strlen(s);
 	word_count = get_word_count(s, c);
 	curr_word_ind = 0;
