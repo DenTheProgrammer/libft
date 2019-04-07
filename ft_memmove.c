@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdebbi <mdebbi@student.42.fr>              +#+  +:+       +#+        */
+/*   By: den <den@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/05 15:30:37 by mdebbi            #+#    #+#             */
-/*   Updated: 2019/04/05 15:30:50 by mdebbi           ###   ########.fr       */
+/*   Updated: 2019/04/07 16:15:39 by den              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,10 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	void *tmp;
-
-	tmp = malloc(n);
-	if (!tmp)
-		return (NULL);
-	ft_memcpy(tmp, src, n);
-	ft_memcpy(dest, tmp, n);
-	free(tmp);
+	if (dest > src)
+		ft_memcpy(dest, src, n);
+	else
+		while (n--)
+			*((char *)dest + n) = *((char *)src + n);
 	return (dest);
 }

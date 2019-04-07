@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdebbi <mdebbi@student.42.fr>              +#+  +:+       +#+        */
+/*   By: den <den@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/03 21:27:10 by mdebbi            #+#    #+#             */
-/*   Updated: 2019/04/06 20:06:40 by mdebbi           ###   ########.fr       */
+/*   Updated: 2019/04/07 16:18:25 by den              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	intlen(int n)
+static	size_t	intlen(int n)
 {
 	size_t len;
 

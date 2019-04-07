@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdebbi <mdebbi@student.42.fr>              +#+  +:+       +#+        */
+/*   By: den <den@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/03 19:06:54 by mdebbi            #+#    #+#             */
-/*   Updated: 2019/04/06 19:55:49 by mdebbi           ###   ########.fr       */
+/*   Updated: 2019/04/07 16:24:31 by den              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n)
 		if (str1[i] != str2[i])
 			return (str1[i] - str2[i]);
 		if (i == n - 1)
-			return 0;
+			return (0);
 		i++;
 	}
 	return (str1[i] - str2[i]);

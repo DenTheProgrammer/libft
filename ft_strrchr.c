@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdebbi <mdebbi@student.42.fr>              +#+  +:+       +#+        */
+/*   By: den <den@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/05 15:32:47 by mdebbi            #+#    #+#             */
-/*   Updated: 2019/04/05 15:32:49 by mdebbi           ###   ########.fr       */
+/*   Updated: 2019/04/07 16:25:33 by den              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char *last = NULL;
+	char *last;
 
+	last = NULL;
 	while (*s)
 	{
 		if (*s == c)

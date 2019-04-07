@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdebbi <mdebbi@student.42.fr>              +#+  +:+       +#+        */
+/*   By: den <den@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/03 19:28:21 by mdebbi            #+#    #+#             */
-/*   Updated: 2019/04/06 22:16:41 by mdebbi           ###   ########.fr       */
+/*   Updated: 2019/04/07 16:26:15 by den              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		is_space(char c)
+static	int		is_space(char c)
 {
 	return (c == ' ' || c == '\n' || c == '\t');
 }
