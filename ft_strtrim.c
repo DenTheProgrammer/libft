@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: den <den@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: mdebbi <mdebbi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/03 19:28:21 by mdebbi            #+#    #+#             */
-/*   Updated: 2019/04/07 16:26:15 by den              ###   ########.fr       */
+/*   Updated: 2019/04/07 18:57:48 by mdebbi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static	int		is_space(char c)
 	return (c == ' ' || c == '\n' || c == '\t');
 }
 
-char	*ft_strtrim(char const *s)
+char			*ft_strtrim(char const *s)
 {
 	char	*trimmed;
 	int		i;
