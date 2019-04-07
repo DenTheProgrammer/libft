@@ -6,7 +6,7 @@
 /*   By: mdebbi <mdebbi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/03 19:28:21 by mdebbi            #+#    #+#             */
-/*   Updated: 2019/04/07 18:57:48 by mdebbi           ###   ########.fr       */
+/*   Updated: 2019/04/07 19:33:11 by mdebbi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char			*ft_strtrim(char const *s)
 	while (is_space(s[i++]))
 		befsp++;
 	if (befsp == len)
-		return ("");
+		return (ft_strnew(0));
 	i = len;
 	while (is_space(s[--i]))
 		aftsp++;
