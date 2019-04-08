@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd.c                                        :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: den <den@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/08 14:52:02 by den               #+#    #+#             */
-/*   Updated: 2019/04/08 14:53:52 by den              ###   ########.fr       */
+/*   Created: 2019/04/08 15:52:11 by den               #+#    #+#             */
+/*   Updated: 2019/04/08 15:57:13 by den              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd(t_list **alst, t_list *new)
+void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
-    t_list *tmp;
-
-    tmp = *alst;
-    *alst = new;
-    new->next = tmp;
+    while (lst && f)
+    {
+        f(lst);
+        lst = lst->next;
+    }
 }
