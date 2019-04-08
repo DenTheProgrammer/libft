@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mdebbi <mdebbi@student.42.fr>              +#+  +:+       +#+         #
+#    By: den <den@student.42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/02 20:20:20 by mdebbi            #+#    #+#              #
-#    Updated: 2019/04/07 19:49:14 by mdebbi           ###   ########.fr        #
+#    Updated: 2019/04/08 19:51:48 by den              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,8 @@ SRCS = ft_atoi.c ft_bzero.c ft_isalnum.c ft_itoa.c ft_strdel.c \
 	 ft_strlcat.c ft_strlen.c ft_strmap.c ft_strmapi.c ft_strncat.c \
 	 ft_strncmp.c ft_strncpy.c ft_strnequ.c ft_strnew.c ft_strnstr.c \
 	 ft_strsub.c ft_strtrim.c ft_tolower.c ft_toupper.c \
-	 ft_strrchr.c ft_strsplit.c ft_strstr.c
+	 ft_strrchr.c ft_strsplit.c ft_strstr.c ft_lstadd.c ft_lstdel.c \
+	 ft_lstdelone.c ft_lstiter.c ft_lstmap.c ft_lstnew.c ft_lstpush.c
 
 $(NAME):
 	gcc -c -Wall -Wextra -Werror $(SRCS) $(INCLUDES)

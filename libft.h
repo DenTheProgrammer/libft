@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdebbi <mdebbi@student.42.fr>              +#+  +:+       +#+        */
+/*   By: den <den@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/02 19:57:19 by mdebbi            #+#    #+#             */
-/*   Updated: 2019/04/08 17:24:30 by mdebbi           ###   ########.fr       */
+/*   Updated: 2019/04/08 19:51:29 by den              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,4 +86,12 @@ struct s_list	*next;
 }				t_list;
 t_list	*ft_lstnew(void const *content, size_t content_size);
 void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
+void 	ft_lstdel(t_list **alst, void (*del)(void *,size_t));
+void	ft_lstadd(t_list **alst, t_list *new);
+void	ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+t_list  *ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+/*
+** my bonus
+*/
+void ft_lstpush(t_list *list, t_list *node);
 #endif
