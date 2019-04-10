@@ -3,20 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstpush.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: den <den@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: mdebbi <mdebbi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/08 19:49:57 by den               #+#    #+#             */
-/*   Updated: 2019/04/08 19:50:36 by den              ###   ########.fr       */
+/*   Updated: 2019/04/10 23:15:09 by mdebbi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstpush(t_list *list, t_list *node)
+void	ft_lstpush(t_list **list, t_list *node)
 {
-    if (!list)
-        list = node;
-    while(list->next)
-        list = list->next;
-    list->next = node;
+	t_list *tmp;
+
+	if (!*list)
+	{
+		*list = node;
+		return ;
+	}
+	tmp = *list;
+	while (tmp->next)
+		tmp = tmp->next;
+	tmp->next = node;
 }
