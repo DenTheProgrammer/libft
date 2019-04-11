@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_lstlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdebbi <mdebbi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/05 15:32:47 by mdebbi            #+#    #+#             */
-/*   Updated: 2019/04/11 13:13:15 by mdebbi           ###   ########.fr       */
+/*   Created: 2019/04/11 12:39:12 by mdebbi            #+#    #+#             */
+/*   Updated: 2019/04/11 12:42:37 by mdebbi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+size_t	ft_lstlen(t_list *list)
 {
-	char *last;
+	size_t len;
 
-	last = NULL;
-	while (*s)
+	len = 0;
+	while (list)
 	{
-		if (*s == c)
-			last = (char *)s;
-		s++;
+		list = list->next;
+		len++;
 	}
-	return ((*s == c) ? (char *)s : last);
+	return (len);
 }

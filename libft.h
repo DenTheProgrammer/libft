@@ -6,7 +6,7 @@
 /*   By: mdebbi <mdebbi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/02 19:57:19 by mdebbi            #+#    #+#             */
-/*   Updated: 2019/04/10 23:23:44 by mdebbi           ###   ########.fr       */
+/*   Updated: 2019/04/11 13:02:29 by mdebbi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,4 +95,8 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 ** my bonus
 */
 void				ft_lstpush(t_list **list, t_list *node);
+size_t				ft_lstlen(t_list *list);
+int					ft_isspace(int c);
+char				*ft_strtolower(char *str);
+char				*ft_strtoupper(char *str);
 #endif
